@@ -7,7 +7,7 @@ const Header = () => {
       <div className=' flex flex-wrap flex-row justify-between items-center gap-4 px-4 max-w-6xl mx-auto'>
         <Link to="/">
           <h1 className=' text-sm sm:text-xl font-semibold'>
-            <span className='text-red-600'>Royal</span>
+            <span className='text-red-600'><span className='text-3xl font-serif'>R</span>oyal</span>
             <span className='text-slate-700'>Estate</span>
           </h1>
         </Link>
