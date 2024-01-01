@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import OAuth from '../components/OAuth';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -53,7 +54,8 @@ const SignUp = () => {
           <input type="email" id="email" placeholder='email' className='py-1 px-3 outline-none rounded-md' onChange={handleChange} />
           <input type="password" id="password" placeholder='password' className='py-1 px-3 outline-none rounded-md' onChange={handleChange} />
           <input type="submit" value={loading ? "Loading..." : "Sign Up"} className='bg-orange-600 py-2 text-white rounded-md hover:opacity-80' />
-          <input type="submit" value="Sign Up with Google" className='bg-blue-600 py-2 text-white rounded-md hover:opacity-80' />
+          
+          <OAuth/>
           <a href="/sign_in">already have an Account ? <strong>Sign In</strong></a>
           {
             error && <p className='text-red-500 mt-5 text-center'>{error}</p>
