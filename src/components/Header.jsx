@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Header = () => {
+  const { currentUser } = useSelector(state => state.user)
   return (
     <header className=' w-full bg-slate-300 shadow-xl py-4 '>
       <div className=' flex flex-wrap flex-row justify-between items-center gap-4 px-4 max-w-6xl mx-auto'>
@@ -18,7 +20,7 @@ const Header = () => {
         </form>
 
         <nav>
-          <ul className='flex gap-10 font-semibold'>
+          <ul className='flex gap-10 font-semibold items-center'>
 
             <li className='hidden sm:inline'>
               <NavLink to="/"
@@ -32,18 +34,24 @@ const Header = () => {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/sign_in"
-                className={({ isActive }) => `duration-200 ${isActive ? 'text-orange-500' : 'text-slate-900'}`}>
-                Sign In
-              </NavLink>
-            </li>
+            {/*  */}
             <li>
               <NavLink to="/sign_up"
                 className={({ isActive }) => `duration-200 ${isActive ? 'text-orange-500' : 'text-slate-900'}`}>
                 Sign Up
               </NavLink>
             </li>
+
+            <li>
+              <NavLink to="/profile"
+                className={({ isActive }) => `duration-200 ${isActive ? 'text-orange-500' : 'text-slate-900'}`}>
+                {
+                  currentUser ? <img src={currentUser.avatar} alt="Profile" className='w-10 rounded-full object-cover' /> : "Sign In"
+                }
+
+              </NavLink>
+            </li>
+
 
 
           </ul>
