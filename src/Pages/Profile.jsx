@@ -9,7 +9,7 @@ const Profile = () => {
 
       <form className='px-20  rounded-lg'>
         <div className='flex flex-col gap-5 pt-10'>
-          <img src={currentUser.avatar} className='w-32 mb-6 rounded-full self-center' alt="" />
+          <img src={currentUser.avatar} className='w-32 mb-6 rounded-full self-center cursor-pointer' alt="" />
           <input type="text" id='username' value={currentUser.username} className='py-1 px-3 outline-none rounded-md min-w-50 ' />
           <input type="email" id='email' value={currentUser.email} className='py-1 px-3 outline-none rounded-md min-w-50 ' />
           <input type="password" id='password' value={currentUser.password} className='py-1 px-3 outline-none rounded-md min-w-50 ' />
@@ -17,8 +17,8 @@ const Profile = () => {
         </div>
       </form>
       <div className='flex justify-between px-20 mt-2 font-semibold'>
-        <span className='text-red-600'>account delete</span>
-        <span className='text-red-600'>sign out</span>
+        <span className='text-red-600 cursor-pointer'>account delete</span>
+        <span className='text-red-600 cursor-pointer'>sign out</span>
       </div>
         
     </div>
