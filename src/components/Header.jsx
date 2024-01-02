@@ -34,14 +34,6 @@ const Header = () => {
                 About
               </NavLink>
             </li>
-            {/*  */}
-            <li>
-              <NavLink to="/sign_up"
-                className={({ isActive }) => `duration-200 ${isActive ? 'text-orange-500' : 'text-slate-900'}`}>
-                Sign Up
-              </NavLink>
-            </li>
-
             <li>
               <NavLink to="/profile"
                 className={({ isActive }) => `duration-200 ${isActive ? 'text-orange-500' : 'text-slate-900'}`}>
